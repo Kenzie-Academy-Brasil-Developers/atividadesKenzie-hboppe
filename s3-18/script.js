@@ -27,11 +27,11 @@ else{
 
 // Exercicio 3
 
-// let botaoMenu = false;
-// let avaliarClick = !botaoMenu;
+let botaoMenu = false;
+let avaliarClick = !botaoMenu;
 
-// if(avaliarClick){
-//     return "abrir menu";
-// } else {
-//     return "fechar menu";
-// }
+if(avaliarClick){
+    return "abrir menu";
+} else {
+    return "fechar menu";
+}
