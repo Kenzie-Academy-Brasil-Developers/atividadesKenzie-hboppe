@@ -77,6 +77,38 @@
 
 // incrementTextMiddle("Fullstack")
 
-function padEnd(){
+///////////////////////EXERCICIO 6/////////////////
+
+
+// function padEnd(string1, num, string2){
     
+//     let newString = string1;
+//     for (let i = 0; i < num; i++){
+//         newString += string2
+//     }
+
+//     return newString
+// }
+
+// console.log(padEnd("Kenzie", 5, "foo"))
+
+///////////////////////EXERCICIO 7/////////////////
+
+// function padStart(string1, num, string2){
+//     let newString = ''
+//     for (let i = 0; i < num; i++){
+//         newString += string2
+//     }
+//     newString += string1;
+//     return newString
+
+// }
+
+// console.log(padStart("Kenzie", 3, "foo"));
+
+/////////////////////EXERCICIO 8/////////////////
+
+function subString(string, num1, num2){
+
 }
+
