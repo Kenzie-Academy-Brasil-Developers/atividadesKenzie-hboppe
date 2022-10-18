@@ -108,7 +108,44 @@
 
 /////////////////////EXERCICIO 8/////////////////
 
-function subString(string, num1, num2){
+// function subString(string, num1, num2){
 
-}
+//     let newString = ''
+//     for (let i = num1; i < num2; i++){
+//         newString += string[i]
+//     }
+//     return newString
+// }
 
+// console.log(subString("Mozilla", 1, 3))
+
+/////////////////////EXERCICIO 9/////////////////
+
+// function stringRepeater(string, number){
+
+//     let newString = ''
+
+//     for (let i = 0; i < number; i++){
+//         newString += string
+//     }
+
+//     return newString;
+// }
+
+// console.log(stringRepeater("Because I'm happy. ", 3))
+
+/////////////////////EXERCICIO 10/////////////////
+
+// function stringCentralizer(string, num1, string2){
+//     let center = string;
+//     let newString = ''
+//     for (let i = 0; i < num1; i++){
+//         newString = string2 + center + string2
+//         center = newString;
+//     }
+
+//     return newString;
+
+// }
+
+// console.log(stringCentralizer('JavaScript', 8, '='))
