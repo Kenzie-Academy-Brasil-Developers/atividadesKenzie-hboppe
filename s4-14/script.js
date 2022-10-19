@@ -40,3 +40,76 @@ const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
 // console.log(retornaValorEpecifico(numero))
 
 ///////////////EXERCICIO 4////////////
+
+// function retornarTipoElemento(num){
+
+//     let elem = listaDeElementos[num];
+//     let tipo = typeof(elem);
+    
+
+//     if(tipo === 'number') {
+//         alert(`O elemento ${elem}, é um elemento do tipo número`)
+//     } else if (tipo == 'string'){
+//         alert(`O elemento ${elem}, é um elemento do tipo string`)
+//     }
+    
+// }
+
+// let number = parseInt(prompt(`Digite um numero inteiro`))
+
+// retornarTipoElemento(number)
+
+////////////////////EXERCICIO 5/////////////////
+
+// function removerElemento(num){
+
+//     if (num > listaDeElementos.length){
+//         return `Numero invalido`
+//     } else {
+
+//         let elemRemov = listaDeElementos.splice(num, 1);
+
+//         return `O valor ${elemRemov}, foi removido da lista, a lista atualizado é: ${listaDeElementos}`
+//     }
+
+    
+// }
+
+// let number = parseInt(prompt(`Digite um numero inteiro`))
+
+// console.log(removerElemento(number))
+
+
+////////////////////EXERCICIO 6/////////////////
+
+// function removeUltimoElementoString(){
+
+//     let ultElem = listaDeElementos[listaDeElementos.length - 1]
+
+//     if (typeof(ultElem) === 'string'){
+//         listaDeElementos.pop()
+//         return `Elemento deletado com sucesso`
+//     } else {
+//         return `Falha ao remover o elemento da lista`
+//     }
+// }
+
+// console.log(removeUltimoElementoString())
+
+////////////////////EXERCICIO 7/////////////////
+
+// function consultaPosição(string){
+//     let index = listaDeElementos.indexOf(string)
+
+//     if (index != -1){
+//         return `O valor procurado está na posiçao: ${index}`
+//     } else {
+//         return `Valor não encontrado`
+//     }
+// }
+
+// console.log(consultaPosição(`19`))
+
+////////////////////EXERCICIO 8/////////////////
+
+
