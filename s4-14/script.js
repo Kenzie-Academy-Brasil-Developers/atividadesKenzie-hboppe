@@ -155,21 +155,24 @@ const listaDeElementos = [1,5,7,9,3,"10","11","15"]
 
 ////////////////////EXERCICIO 10/////////////////
 
-function inserirNaPosicaoCorreta(value){
+// function inserirNaPosicaoCorreta(value){
 
-    let elem = Number(value);
-    
-    if (typeof(elem) == 'number' && elem >= 0 && elem <= 10){
-        listaDeElementos.unshift(elem)
-        console.log(listaDeElementos)
-        return `Lista atualizada com sucesso`
-    } else if (typeof(elem) == "undefined" && typeof(value) == 'string'){
-        console.log(listaDeElementos)
-        listaDeElementos.push(value)
-        return `Lista atualizada com sucesso`
-    }
-}
+//     let elem = Number(value);
+//     if (elem < 0 || elem > 10) {
+//         return `Valor invalido`
 
-let novoElem = prompt('Insira um elemento')
+//     } else if (typeof(elem) == 'number' && elem >= 0 && elem <= 10){
+//         listaDeElementos.unshift(elem)
+//         console.log(listaDeElementos)
+//         return `Lista atualizada com sucesso`
 
-console.log(typeof(Number(novoElem)))
+//     } else if (typeof(value) == 'string'){
+//         console.log(listaDeElementos)
+//         listaDeElementos.push(value)
+//         return `Lista atualizada com sucesso`
+//     } 
+// }
+
+// let novoElem = prompt('Insira um elemento')
+
+// console.log(inserirNaPosicaoCorreta(novoElem))
