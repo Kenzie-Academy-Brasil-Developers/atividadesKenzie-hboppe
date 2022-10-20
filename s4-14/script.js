@@ -1,4 +1,4 @@
-const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
+const listaDeElementos = [1,5,7,9,3,"10","11","15"]
 
 ///////////////EXERCICIO 1////////////
 
@@ -112,4 +112,64 @@ const listaDeElementos = [1,5,7,9,3, "10", "11", "15"]
 
 ////////////////////EXERCICIO 8/////////////////
 
+// function removerElementoEspecifico(valor){
+//     let posicao1 = listaDeElementos.indexOf(Number(valor));
+//     let posicao2 = listaDeElementos.indexOf(String(valor));
+    
 
+//     if(posicao1 != -1){
+//         listaDeElementos.splice(posicao1, 1)
+//         return `Elemento ${valor} deletado com sucesso`
+
+//     } else if (posicao2 != -1){
+//         listaDeElementos.splice(posicao2, 1)
+//         return `Elemento ${valor} deletado com sucesso`
+
+//     } else {
+//         return `Elemento não encontrado`
+//     }
+
+// }
+
+// let nomeElement = prompt(`Digite um número`)
+
+// console.log(removerElementoEspecifico(nomeElement))
+
+
+////////////////////EXERCICIO 9/////////////////
+
+// function alteraElemento(num, novoElem){
+//     if (num < listaDeElementos.length - 1){
+//         listaDeElementos.splice(num, 1, novoElem);
+//         return `Atualização realizada com sucesso`
+//     } else {
+//         return `Erro ao atualizar o elemento`
+//     }
+// }
+
+// let numero = parseInt(prompt(`Digite um numero`))
+
+// let novoElem = prompt(`Digite o novo elemento`)
+
+// console.log(alteraElemento(numero, novoElem));
+
+////////////////////EXERCICIO 10/////////////////
+
+function inserirNaPosicaoCorreta(value){
+
+    let elem = Number(value);
+    
+    if (typeof(elem) == 'number' && elem >= 0 && elem <= 10){
+        listaDeElementos.unshift(elem)
+        console.log(listaDeElementos)
+        return `Lista atualizada com sucesso`
+    } else if (typeof(elem) == "undefined" && typeof(value) == 'string'){
+        console.log(listaDeElementos)
+        listaDeElementos.push(value)
+        return `Lista atualizada com sucesso`
+    }
+}
+
+let novoElem = prompt('Insira um elemento')
+
+console.log(typeof(Number(novoElem)))
