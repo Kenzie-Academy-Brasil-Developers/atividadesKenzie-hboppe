@@ -98,8 +98,51 @@ const figure = {
 
 ///////////////////EXERCICIO 4//////////////////
 
-function inserNewClass(str){
+// function inserNewClass(str){
+//     const classesPermi = ["Warrior", "Barbarious", "Arch", "Hunter", "Survivor"]
 
-}
+//     let novaClasse = str.toLowerCase();
 
+//     if (figure.classes.length < 3){
+//         for (let i = 0; i < figure.classes.length; i++){
+//             if(figure.classes[i].toLocaleLowerCase == novaClasse){
+//                 return `O personagem já pertence a classe ${figure.classes[i]}`
+//             } else {
+//                 let novoForm = novaClasse.substring(0,1).toUpperCase() + novaClasse.substring(1)
+//                 figure.classes.push(novoForm)
+
+//                 return `Classe ${novoForm}, inserida com sucesso`
+//             }
+//         }
+
+//     } else {
+//         return `Este personagem não pode estar em mais classes`;
+//     }
+// }
+
+// console.log(inserNewClass("Barbarious"))
+
+
+///////////////////EXERCICIO 5//////////////////
+
+// function noMoreBarbarious(){
+    
+//     if (figure.leader_trend === true){
+        
+//         for(let i = 0; i < figure.classes.length; i++){
+//             if(figure.classes[i] == "Barbarious"){
+
+//                 figure.leader_trend = false;
+
+//                 return `O ${figure.name}, agora é um inimigo`
+//             }
+//         }
+//         return `Barbarious nao está incluso na classe`
+
+//     } else {
+//         return `O leader trend é falso`
+//     }
+// }
+
+// console.log(noMoreBarbarious())
 
