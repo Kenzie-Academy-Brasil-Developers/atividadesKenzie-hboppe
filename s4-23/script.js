@@ -165,4 +165,66 @@ const carros = [
 // console.log(filtraPorAcessorio(carros, 'trava'))
 
 
-/////////////////EXERCICIO 5/////////////////
+/////////////////EXERCICIO 5///////////////////
+
+// function eCarroCompleto(listaCarros){
+
+//     let carrosCompletos = []
+//     for(let i = 0; i < listaCarros.length; i++){
+//         if(listaCarros[i].completo == true){
+//             carrosCompletos.push(listaCarros[i]);
+//         }
+//     }
+
+//     return carrosCompletos
+// }
+
+// console.log(eCarroCompleto(carros))
+
+/////////////////EXERCICIO 6///////////////////
+
+// function adicionaCarro(){
+//     let modelo = prompt(`Digite o modelo do carro`);
+//     let marca = prompt(`Digite o nome da marca`);
+//     let ano = prompt(`Digite o ano`);
+//     let cor = prompt(`Digite a cor`);
+//     let completo = prompt(`O carro é completo? (Valores aceitos: true ou false)`);
+//     let acessorios = prompt(`Digite o acesorio`);
+//     let preco = prompt(`Digite o preco`)
+
+//     let newCar = {
+//         modelo: modelo,
+//         marca: marca,
+//         ano: ano,
+//         cor: cor,
+//         completo: completo,
+//         acessorios: [acessorios],
+//         preco: preco,
+//     }
+
+//     if(newCar.completo == 'true'){
+
+//         newCar.completo = true;
+//     } else if (newCar.completo == 'false'){
+//         newCar.completo = false;
+//     }
+
+//     carros.push(newCar);
+//     console.log(carros);
+    
+// }
+
+// adicionaCarro()
+
+/////////////////EXERCICIO 7///////////////////
+
+// function removeCarro(listaCarros, posicao){
+    
+//     listaCarros.splice(posicao, 1)
+
+//     return listaCarros
+// }
+
+// console.log(removeCarro(carros, 2));
+
+/////////////////EXERCICIO 8///////////////////
