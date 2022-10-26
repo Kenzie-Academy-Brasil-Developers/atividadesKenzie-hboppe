@@ -12,13 +12,13 @@ const question = {
 function createEvent(obj, str){
     if(typeof str == 'string' && str.length >= 5){
         obj.nameEvent = str;
-        return obj.nameEvent;
+        return obj;
     } else {
         return `The input value is invalid`;
     }
 }
-
-// console.log(createEvent(slenzie, "Dia de Rodeio"))
+createEvent(slenzie, "Dia de Rodeio")
+console.log(slenzie)
 
 function addQuestion(obj, quest){
     if(quest.user == ''){
@@ -26,13 +26,52 @@ function addQuestion(obj, quest){
     } else if(quest.userQuestion == ''){
         return `The question can't be null`
     } else {
-        obj.questions.push(quest.userQuestion)
-        return obj
+        obj.questions.push(quest)
+        return `Question was updated`
     }
 }
 
-// console.log(addQuestion(slenzie, question))
+addQuestion(slenzie, question);
+console.log(slenzie)
 
 function addVoteToQuestion(num, obj){
-    
+    if(num > obj.questions.length){
+        return `Question not found."`
+    } else if(num < 0 && parseInt(num) !== num){
+        return `The value is not allowed`
+    } else {
+        obj.questions[num].vote++
+        return `Vote registered successfully"`
+    }
 }
+
+addVoteToQuestion(0, slenzie)
+console.log(slenzie)
+
+function questionAnswered(num, obj){
+    if(num > obj.questions.length){
+        return `Question not found.`
+    } else if(num < 0 && parseInt(num) !== num){
+        return `The value is not allowed`
+    } else {
+        obj.questions[num].answered = true;
+        return `Answer registered successfully`
+    }
+}
+
+questionAnswered(0, slenzie)
+console.log(slenzie)
+
+function unansweredQuestions(obj){
+    const output = []
+    for(let i = 0; i < obj.questions.length; i++){
+        if(obj.questions[i].answered == false){
+            output.push(obj.questions[i])
+        }
+    }
+
+    return output;
+}
+
+unansweredQuestions(slenzie)
+console.log(slenzie)
