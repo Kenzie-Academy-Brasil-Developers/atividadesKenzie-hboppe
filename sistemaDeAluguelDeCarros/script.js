@@ -68,7 +68,22 @@ let user = {
 
     },
     orcamento: function(){
+        let idCarro = parseInt(prompt(`Digite o Id do carro para fazer o orcamento`))
+        let dias = parseInt(prompt(`Por quantos dias voce quer alugar o carro?`))
+
+        let carroOrc = carros.find(car => car.id == idCarro)
+
+        if(carroOrc){
+            alert(`O aluguel total do carro ${carroOrc.marca} ${carroOrc.modelo} por ${dias} dias é de R$ ${(carroOrc.diaria * dias).toFixed(2)}`)
+
+        } else {
+            alert(`Carro nao encontrado. Informe uma ID válida`)
+        }
+    },
+    devolver: function(){
+        let idCarro = parseInt(prompt(`Digite o Id do carro para fazer a devolucao`))
         
+
     }
 
 }
