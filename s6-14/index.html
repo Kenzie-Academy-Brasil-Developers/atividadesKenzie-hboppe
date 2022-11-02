@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+
+    </form>
+    <script>
+        let parag = document.createElement('p');
+        parag.innerText = 'Ola querida'
+        document.querySelector('body').appendChild(parag)
+
+        let inp = document.createElement('input')
+        inp.placeholder = 'Digite seu texto aqui'
+
+        const form = document.querySelector('form');
+        form.appendChild(inp)
+
+        let article = document.createElement('article');
+        let title = document.createElement('h2')
+        let parag2 = document.createElement('p');
+        let a = document.createElement('a');
+
+        title.innerText = 'Título do Post';
+        parag2.innerText = 'Descrição do Post';
+        a.innerText = 'Ver post completo';
+
+        document.querySelector('body').appendChild(title)
+        document.querySelector('body').appendChild(parag2)
+        document.querySelector('body').appendChild(a)
+    </script>
+</body>
+</html>
