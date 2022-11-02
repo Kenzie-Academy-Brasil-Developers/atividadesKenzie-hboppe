@@ -56,16 +56,24 @@ let user = {
             }
         }
 
-        let aluguel = {
-            carroId: idCarro,
-            usuarioId: this.id,
-            usuarioName: this.nome,
+        for(let i = 0; i < carros.length; i++){ // Da pra usar o find() aqui ne? 
+            if(carros[i].id == idCarro){
+                let aluguel = {
+                    carroId: idCarro,
+                    carroNome: `${carros[i].marca} ${carros[i].modelo}`,
+                    usuarioId: this.id,
+                    usuarioName: this.nome,
+                }
+            
+                alugueis.push(aluguel)
+                alert(`Aluguel concluido com sucesso`)
+                return;        
+
+            }
         }
-
-        alugueis.push(aluguel)
-        alert(`Aluguel concluido com sucesso`)
-
-
+        alert(`Carro nao encontrado. Digite uma ID válida`)
+        return;
+        
     },
     orcamento: function(){
         let idCarro = parseInt(prompt(`Digite o Id do carro para fazer o orcamento`))
@@ -82,6 +90,28 @@ let user = {
     },
     devolver: function(){
         let idCarro = parseInt(prompt(`Digite o Id do carro para fazer a devolucao`))
+
+        let idExiste = carros.find((idCar) => idCar.id == idCarro)
+
+        if(idExiste){
+            for(let i = 0; i < alugueis.length; i++){
+
+                if(idCarro == alugueis[i].carroId && alugueis[i].usuarioId == this.id){
+
+                    alugueis.splice(alugueis[i], 1)
+                    alert(`Carro devolvido com sucesso.`)
+                    return;
+                }
+            }
+
+            alert(`Este carro nao foi alugado por voce`)
+            return;
+        } else {
+            alert(`Id inválida. Por favor, informe a Id válida de um carro`)
+            return;
+        }
+
+        
         
 
     }
@@ -94,6 +124,11 @@ const alugueis = []
 
 function cadastrarUsuario(){
     let nome = prompt(`Digite o seu nome`);
+    let regex = nome.replace(/^[^a-zA-Z]{5,10}$/g, '')
+    console.log(regex)
+    // while(nome.replace(/[^a-zA-Z]/, '') !== nome){
+    //     let nome = prompt(`Digite o seu nome`);
+    // }
     let anoDeNasc = parseInt(prompt(`Digite o seu ano de nascimento`));
     let data = new Date()
     let anoDeCadastro = data.getFullYear();
@@ -106,7 +141,7 @@ function cadastrarUsuario(){
 
     const cliente = {...user}
     cliente.id = countId++;
-    cliente.nome = nome;
+    cliente.nome = nome.replace(/[^a-zA-Z]/, '');
     cliente.anoDeNascimento = anoDeNasc;
     cliente.cnh = cnh;
     listaDeClientes.push(cliente);
@@ -136,5 +171,24 @@ function listarCarros(){
 }
 
 function listarCarrosDisponiveis() {
+    
 
+    if(carros.length == alugueis.length){
+        console.log(`Infelizmente, nao há carros disponiveis no momento`)
+        alert(`Sentimos em informar que todos os carros disponiveis estao alugados.`)
+        return;
+    }
+
+    console.log('========CARROS DISPONIVEIS========')
+
+    for(let i = 0; i < carros.length; i++){
+        let found = alugueis.find((car) => car.carroId == carros[i].id);
+
+        if(found){
+            continue;
+        } 
+        
+        console.log(`${carros[i].id} - ${carros[i].marca} ${carros[i].modelo} - ${carros[i].ano}`)
+           
+    }
 }
