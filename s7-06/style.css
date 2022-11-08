@@ -55,6 +55,11 @@ section {
     justify-content: space-evenly;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 input{
     background-color: rgba(128, 128, 128, 0.209);
     border: 0px;
@@ -71,4 +76,17 @@ select {
     padding: 5px;
     width: 200px;
     border-radius: 5px;
+}
+
+li{
+    /* list-style: none; */
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.227);
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
 }
