@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script1.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,15 +18,15 @@
             <h2>Inserir tarefa</h2>
             <form action="#">
                 <div>
-                    <input type="text" name="" id="">
-                    <select name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                    <input type="text" name="" id="tarefa" required>
+                    <select name="" id="select" required>
+                        <option disabled selected value="">Selecione uma opçao</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="prioritário">Prioritário</option>
+                        <option value="normal">Normal</option>
                     </select>
                 </div>
-                <button>Adicionar Tarefa na Lista</button>
+                <button id="add">Adicionar Tarefa na Lista</button>
 
             </form>
         </section>

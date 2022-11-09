@@ -23,6 +23,12 @@ let tasks = [
 
 let ul = document.createElement('ul');
 let section = document.getElementById('tarefas');
+let button = document.getElementById('add');
+button.addEventListener('click', addTarefa)
+let input = document.getElementById('tarefa')
+let select = document.getElementById('select')
+
+
 
 
 let urgent = tasks.filter(tk => tk.tipo == 'urgente');
@@ -31,13 +37,25 @@ let nor = tasks.filter((tk) => tk.tipo == 'normal');
 let array = [...urgent, ...prio, ...nor]
 console.log(array)
 
-
 section.appendChild(ul);
 
-
-for(let i = 0; i < array.length; i++){
-  let li = document.createElement('li');
-  ul.appendChild(li)
-  li.innerHTML = `${array[i].titulo}`
-  li.classList.add(array[i].tipo)
+function addLista(){
+  for(let i = 0; i < array.length; i++){
+    let li = document.createElement('li');
+    ul.appendChild(li)
+    li.innerHTML = `${array[i].titulo}`
+    li.classList.add(array[i].tipo)
+  }
 }
+
+addLista()
+
+function addTarefa(){
+  let obj = {titulo: `${input.value}`, tipo: `${select.value}`}
+  array.push(obj)
+  addLista()
+}
+
+
+
+

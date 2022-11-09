@@ -21,18 +21,23 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
 header {
     display: flex;
     height: 100px;
     box-shadow: 0px 0px 5px rgb(0 0 0 / 39%);
     align-items: center;
     flex-direction: row;
+    justify-content: center;
 }
 
 header > h1 {
     font-family: 'Poor Story', cursive;
     font-size: 45px;
-    margin-left: 50px;
     color: blue;
 }
 
@@ -72,21 +77,53 @@ input{
 select {
     background-color: rgba(128, 128, 128, 0.209);
     border: 0px;
-    height: 25px;
+    height: 35px;
     padding: 5px;
     width: 200px;
     border-radius: 5px;
 }
 
+button#add {
+    margin-top: 10px;
+    height: 40px;
+    background-color: blue;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+}
+
+button#add:hover{
+    cursor: pointer;
+}
+
 li{
-    /* list-style: none; */
     list-style: none;
-    background-color: rgba(128, 128, 128, 0.227);
+    background-color: rgba(128, 128, 128, 0.173);
     font-size: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 h2 {
     font-weight: bold;
     font-size: 20px;
     padding-bottom: 20px;
+}
+
+button.botaoRemover{
+    border: 0px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+button.botaoRemover:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.793);
+
 }
