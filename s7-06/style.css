@@ -92,6 +92,11 @@ button#add {
     color: white;
 }
 
+button#add:hover {
+    background-color: rgba(0, 0, 255, 0.656);
+
+}
+
 button#add:hover{
     cursor: pointer;
 }

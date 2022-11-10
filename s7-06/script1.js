@@ -1,6 +1,6 @@
 let tasks = [
     {
-      titulo: "Buy cat's food",
+      titulo: "Buy cat food",
       tipo: "urgent"
     },
     {
@@ -12,7 +12,7 @@ let tasks = [
       tipo: "priority"
     },  
     {
-      titulo: "Save money for the snaks",
+      titulo: "Save money for snacks",
       tipo: "urgent"
     },  
     {
