@@ -1,23 +1,23 @@
 let tasks = [
     {
-      titulo: "Comprar comida para o gato",
-      tipo: "urgente"
+      titulo: "Buy cat's food",
+      tipo: "urgent"
     },
     {
-      titulo: "Limpar o quarto",
-      tipo: "urgente"
+      titulo: "Clean my bedroom",
+      tipo: "urgent"
     },  
     {
-      titulo: "Consertar Computador",
-      tipo: "prioritário"
+      titulo: "Fix my computer",
+      tipo: "priority"
     },  
     {
-      titulo: "Guardar dinheiro do lanche",
-      tipo: "urgente"
+      titulo: "Save money for the snaks",
+      tipo: "urgent"
     },  
     {
-      titulo: "Beber água",
-      tipo: "prioritário"
+      titulo: "Drink water",
+      tipo: "priority"
     }    
 ]
 
@@ -32,11 +32,11 @@ let select = document.getElementById('select');
 
 function rendLista(objLista){
 
-  
+
 
   ul.innerHTML = '';
-  let urgente = objLista.filter((elem) => elem.tipo === 'urgente');
-  let prior = objLista.filter((elem) => elem.tipo === 'prioritário');
+  let urgente = objLista.filter((elem) => elem.tipo === 'urgent');
+  let prior = objLista.filter((elem) => elem.tipo === 'priority');
   let normal = objLista.filter((elem) => elem.tipo === 'normal');
  
   let novoArray = [...urgente, ...prior, ...normal];
@@ -47,7 +47,7 @@ function rendLista(objLista){
     let p = document.createElement('p');
     let buttonRemove = document.createElement('button');
     buttonRemove.classList.add('botaoRemover')
-    buttonRemove.innerHTML = 'Remover'
+    buttonRemove.innerHTML = 'Mark as done'
 
     buttonRemove.addEventListener('click', function(event){
       let classLi = event.target.closest('li').getAttribute('class');
@@ -63,7 +63,7 @@ function rendLista(objLista){
         let aviso = document.createElement('p');
         liAviso.appendChild(aviso);
     
-        aviso.innerText = 'Parabens! Você completou todas as suas tasks :)'
+        aviso.innerText = 'Congrats! You got all your tasks done :)'
     
         console.log(ul)
         return;
@@ -86,7 +86,7 @@ button.addEventListener('click', addTarefa)
 
 function addTarefa(){
   if(input.value == "" || select.value == ""){
-    alert('Preencha/selecione o campo obrigatório')
+    alert('Please fill out/select the required fields')
     return;
   }
 
@@ -96,5 +96,8 @@ function addTarefa(){
   obj.tipo = select.value;
   tasks.push(obj);
   rendLista(tasks)
+  input.value = ''
+  select.value = ''
+  
 }
 
